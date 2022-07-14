@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <Weather />
       </header>
-      <footer>
+      <footer className="App-footer">
         <a
           href="https://github.com/TessBReid/Weather-app-react"
           target="_blank"
