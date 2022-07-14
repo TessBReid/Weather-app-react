@@ -5,9 +5,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello Weather App</h1>
         <Weather />
       </header>
+      <footer>
+        <a
+          href="https://github.com/TessBReid/Weather-app-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open source Code
+        </a>{" "}
+        by Tessa Bailey-Reid
+      </footer>
     </div>
   );
 }
