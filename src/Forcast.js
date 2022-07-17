@@ -5,7 +5,7 @@ import "./Forcast.css";
 export default function Forcast() {
   return (
     <div className="Forcast">
-      <p>Hello Forcast</p>
+      <p> 7 Day Forcast</p>
     </div>
   );
 }

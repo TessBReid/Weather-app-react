@@ -1,0 +1,8 @@
+.Weather h1 {
+  font-size: 55px;
+}
+
+.Weather {
+  border: solid 1px black;
+  padding: 24px;
+}

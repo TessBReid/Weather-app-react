@@ -1,0 +1,8 @@
+.DailyWeather {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.temp {
+  font-size: 65px;
+}
