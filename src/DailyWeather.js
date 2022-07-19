@@ -2,13 +2,13 @@ import React from "react";
 
 import "./DailyWeather.css";
 
-export default function DailyWeather() {
+export default function DailyWeather(props) {
   return (
     <div className="DailyWeather">
       <div className="row">
         <div className="col-4">
           <div className="today-temperature">
-            <span className="temp">15</span>
+            <span className="temp">{Math.round(props.data.temperature)}</span>
             <span className="units">
               <a href="/" className="celcius">
                 °C
@@ -21,19 +21,25 @@ export default function DailyWeather() {
           </div>
           <div className="today-date">Friday July 15th</div>
           <div className="current-time">4:00PM</div>
-          <div className="weather-description">Clear</div>
+          <div className="weather-description text-capitalize">
+            {props.data.description}
+          </div>
         </div>
         <div className="col-4">
-          <div className="day-icon">SUN ICON</div>
-          <div className="day-info">Feels Like:</div>
-          <div className="humidity">Humidity:</div>
-          <div className="wind">Wind:</div>
+          <div className="day-icon">SUN ICON🌞</div>
+          <div className="day-info">
+            Feels Like: {Math.round(props.data.feelsLike)}
+          </div>
+          <div className="humidity">
+            Humidity: {Math.round(props.data.humidity)}%
+          </div>
+          <div className="wind">Wind: {Math.round(props.data.wind)}km/h</div>
         </div>
         <div className="col-4">
-          <div className="sun">SUNRISE ICON</div>
-          <div className="sunrise-time">Sunrise:</div>
-          <div className="sun">SUNSET ICON</div>
-          <div className="sunset-time">Sunset:</div>
+          <div className="sun">SUNRISE ICON🌅</div>
+          <div className="sunrise-time">Sunrise: {props.data.sunrise}</div>
+          <div className="sun">SUNSET ICON🌄</div>
+          <div className="sunset-time">Sunset: {props.data.sunset}</div>
         </div>
       </div>
     </div>
