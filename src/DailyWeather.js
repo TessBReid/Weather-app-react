@@ -26,7 +26,9 @@ export default function DailyWeather(props) {
           </div>
         </div>
         <div className="col-4">
-          <div className="day-icon">SUN ICON🌞</div>
+          <div className="day-icon">
+            <img src="images/sun.png" className="icon" alt="sun" />
+          </div>
           <div className="day-info">
             Feels Like: {Math.round(props.data.feelsLike)}
           </div>
@@ -36,9 +38,13 @@ export default function DailyWeather(props) {
           <div className="wind">Wind: {Math.round(props.data.wind)}km/h</div>
         </div>
         <div className="col-4">
-          <div className="sun">SUNRISE ICON🌅</div>
+          <div className="sun">
+            <img src="images/sunrise 2.png" className="icon" alt="sun" />
+          </div>
           <div className="sunrise-time">Sunrise: {props.data.sunrise}</div>
-          <div className="sun">SUNSET ICON🌄</div>
+          <div className="sun">
+            <img src="images/sunset 2.png" className="icon" alt="sun" />
+          </div>
           <div className="sunset-time">Sunset: {props.data.sunset}</div>
         </div>
       </div>

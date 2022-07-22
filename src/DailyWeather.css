@@ -3,6 +3,12 @@
   margin: 15px auto;
 }
 
+img,
+.icon {
+  width: 40%;
+  margin: 10px;
+}
+
 .temp {
   font-size: 65px;
 }

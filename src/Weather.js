@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DailyWeather from "./DailyWeather";
 import Forcast from "./Forcast";
+import Location from "./Loction";
 import axios from "axios";
 
 import "./Weather.css";
@@ -47,7 +48,8 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="transparent-box">
           <div className="weather-app">
-            <h1>{city}</h1>
+            <Location data={weatherData} />
+            <h1>hi</h1>
             <form className="search-bar" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-6">
