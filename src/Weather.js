@@ -18,7 +18,7 @@ export default function Weather(props) {
       time: "6:35PM",
       humidity: response.data.main.humidity,
       feelsLike: response.data.main.feels_like,
-      location: response.data.name,
+      city: response.data.name,
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
       icon: response.data.weather[0].icon,
@@ -43,13 +43,12 @@ export default function Weather(props) {
     axios.get(apiUrl).then(showTemperature);
   }
 
-  if (weatherData) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="transparent-box">
           <div className="weather-app">
             <Location data={weatherData} />
-            <h1>hi</h1>
             <form className="search-bar" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-6">
@@ -84,6 +83,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
+    search();
     return "Loading..";
   }
 }
