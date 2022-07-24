@@ -15,7 +15,6 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
-      time: "6:35PM",
       humidity: response.data.main.humidity,
       feelsLike: response.data.main.feels_like,
       city: response.data.name,

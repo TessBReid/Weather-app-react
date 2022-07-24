@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherIcons from "./WeatherIcons";
 import WeatherTemp from "./WeatherTemp";
+import FormatDate from "./FormatDate";
 
 import "./DailyWeather.css";
 
@@ -12,8 +13,7 @@ export default function DailyWeather(props) {
           <div className="today-temperature">
             <WeatherTemp conversion={props.data.temperature} />
           </div>
-          <div className="today-date">Friday July 15th</div>
-          <div className="current-time">4:00PM</div>
+          <FormatDate date={props.data.date} />
           <div className="weather-description text-capitalize">
             {props.data.description}
           </div>
