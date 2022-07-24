@@ -25,7 +25,7 @@ export default function WeatherIcons(props) {
   return (
     <div>
       <img src="images/02d.png" alt={props.alt} />
-      <img src={codeIcon[props.code]} alt={props.alt} />
+      <img src={codeIcon[props.iconCode]} alt={props.alt} />
     </div>
   );
 }

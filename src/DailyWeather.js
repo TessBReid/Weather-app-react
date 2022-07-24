@@ -19,7 +19,10 @@ export default function DailyWeather(props) {
           </div>
         </div>
         <div className="col-4">
-          <WeatherIcons code={props.data.icon} alt={props.data.description} />
+          <WeatherIcons
+            iconCode={props.data.icon}
+            alt={props.data.description}
+          />
           <div className="day-icon">
             <img src={props.data.icon} alt={props.data.description} />
           </div>
