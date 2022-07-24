@@ -1,4 +1,6 @@
 import React from "react";
+import WeatherIcons from "./WeatherIcons";
+import WeatherTemp from "./WeatherTemp";
 
 import "./DailyWeather.css";
 
@@ -8,16 +10,7 @@ export default function DailyWeather(props) {
       <div className="row">
         <div className="col-4">
           <div className="today-temperature">
-            <span className="temp">{Math.round(props.data.temperature)}</span>
-            <span className="units">
-              <a href="/" className="celcius">
-                °C
-              </a>
-              |
-              <a href="/" className="fahrenheit">
-                °F
-              </a>
-            </span>
+            <WeatherTemp conversion={props.data.temperature} />
           </div>
           <div className="today-date">Friday July 15th</div>
           <div className="current-time">4:00PM</div>
@@ -26,8 +19,9 @@ export default function DailyWeather(props) {
           </div>
         </div>
         <div className="col-4">
+          <WeatherIcons code={props.data.icon} alt={props.data.description} />
           <div className="day-icon">
-            <img src="images/sun.png" className="icon" alt="sun" />
+            <img src={props.data.icon} alt={props.data.description} />
           </div>
           <div className="day-info">
             Feels Like: {Math.round(props.data.feelsLike)}
