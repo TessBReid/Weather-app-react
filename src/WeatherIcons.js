@@ -22,10 +22,5 @@ export default function WeatherIcons(props) {
     "50n": "mist",
   };
 
-  return (
-    <div>
-      <img src="images/02d.png" alt={props.alt} />
-      <img src={codeIcon[props.iconCode]} alt={props.alt} />
-    </div>
-  );
+  return <div></div>;
 }

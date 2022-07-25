@@ -20,7 +20,7 @@ export default function Weather(props) {
       city: response.data.name,
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
-      icon: response.data.weather[0].icon,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
     });
