@@ -23,9 +23,7 @@ export default function DailyWeather(props) {
             iconCode={props.data.icon}
             alt={props.data.description}
           />
-          <div className="day-icon">
-            <img src={props.data.icon} alt={props.data.description} />
-          </div>
+
           <div className="day-info">
             Feels Like: {Math.round(props.data.feelsLike)}
           </div>

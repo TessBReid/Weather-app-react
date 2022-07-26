@@ -5,8 +5,9 @@
 
 img,
 .icon {
-  width: 40%;
+  width: 50%;
   margin: 10px;
+  margin-top: 20px;
 }
 
 .temp {

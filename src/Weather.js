@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DailyWeather from "./DailyWeather";
-import Forcast from "./Forcast";
+import Forecast from "./Forecast";
 import Location from "./Loction";
 import axios from "axios";
 
@@ -20,9 +20,10 @@ export default function Weather(props) {
       city: response.data.name,
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
+      coordinates: response.data.coord,
     });
   }
 
@@ -77,7 +78,7 @@ export default function Weather(props) {
           </div>
 
           <DailyWeather data={weatherData} />
-          <Forcast />
+          <Forecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
