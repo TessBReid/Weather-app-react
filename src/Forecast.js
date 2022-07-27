@@ -20,9 +20,7 @@ export default function Forecast(props) {
           <div className="col">
             <div className="Forecast-day">{forecast[0].dt}</div>
             <div className="sun-icon">
-              <WeatherIcons
-                code={`/images/${forecast[0].weather[0].icon}.png`}
-              />
+              <WeatherIcons code={forecast[0].weather[0].icon} />
             </div>
             <div>
               <span className="Forecast-high">{forecast[0].temp.max}°|</span>

@@ -25,7 +25,7 @@ export default function DailyWeather(props) {
           />
 
           <div className="day-info">
-            Feels Like: {Math.round(props.data.feelsLike)}
+            Feels Like: {Math.round(props.data.feelsLike)}°
           </div>
           <div className="humidity">
             Humidity: {Math.round(props.data.humidity)}%
