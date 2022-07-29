@@ -3,13 +3,23 @@
   margin: 15px auto;
 }
 
-img,
 .icon {
-  width: 50%;
-  margin: 10px;
-  margin-top: 20px;
+  width: 65px;
+  display: block;
+  margin: 0, auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .temp {
   font-size: 65px;
+}
+
+img,
+.dayIcon {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 10px;
 }

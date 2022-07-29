@@ -20,6 +20,18 @@ export default function Forecast(props) {
           <div className="col">
             <ForecastDays data={forecast[0]} />
           </div>
+          <div className="col">
+            <ForecastDays data={forecast[1]} />
+          </div>{" "}
+          <div className="col">
+            <ForecastDays data={forecast[2]} />
+          </div>
+          <div className="col">
+            <ForecastDays data={forecast[3]} />
+          </div>
+          <div className="col">
+            <ForecastDays data={forecast[4]} />
+          </div>
         </div>
       </div>
     );

@@ -19,10 +19,12 @@ export default function DailyWeather(props) {
           </div>
         </div>
         <div className="col-4">
-          <WeatherIcons
-            iconCode={props.data.icon}
-            alt={props.data.description}
-          />
+          <div className="dayIcon">
+            <WeatherIcons
+              iconCode={props.data.icon}
+              alt={props.data.description}
+            />
+          </div>
 
           <div className="day-info">
             Feels Like: {Math.round(props.data.feelsLike)}°
