@@ -7,6 +7,10 @@ body {
   margin: 45px auto;
 }
 
+.App-header {
+  background: white;
+}
+
 .App a {
   color: blue;
   text-decoration: none;
