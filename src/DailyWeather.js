@@ -6,6 +6,19 @@ import FormatDate from "./FormatDate";
 import "./DailyWeather.css";
 
 export default function DailyWeather(props) {
+  function formateDate(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let hours = date.getHours();
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    return `${hours}:${minutes}`;
+  }
+
   return (
     <div className="DailyWeather">
       <div className="row">
@@ -38,11 +51,15 @@ export default function DailyWeather(props) {
           <div className="sun">
             <img src="images/sunrise 2.png" className="icon" alt="sun" />
           </div>
-          <div className="sunrise-time">Sunrise: {props.data.sunrise}</div>
+          <div className="sunrise-time">
+            Sunrise: {formateDate(props.data.sunrise)}
+          </div>
           <div className="sun">
             <img src="images/sunset 2.png" className="icon" alt="sun" />
           </div>
-          <div className="sunset-time">Sunset: {props.data.sunset}</div>
+          <div className="sunset-time">
+            Sunset: {formateDate(props.data.sunset)}
+          </div>
         </div>
       </div>
     </div>

@@ -15,6 +15,7 @@ export default function Forecast(props) {
   function handleCoordinates(response) {
     setForecast(response.data.daily);
     setDataLoading(true);
+    console.log(response.data.timezone_offset);
   }
 
   if (dataLoading) {
