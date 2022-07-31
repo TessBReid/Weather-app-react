@@ -1,6 +1,15 @@
+body {
+  background: #dce6e2;
+  background-color: #dce6e2;
+}
+
 .App {
   max-width: 600px;
   margin: 45px auto;
+}
+
+.App-header {
+  background: #dce6e2;
 }
 
 .App a {
